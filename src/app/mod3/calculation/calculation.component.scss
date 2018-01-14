@@ -1,0 +1,37 @@
+.calculation .to-deduct {
+	color: red;
+}
+
+.calculation .to-add {
+	color: green;
+}
+
+.calculation .final {
+	font-weight: bold;
+}
+
+.calculation .total {
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.calculation .title {
+	text-decoration: underline;
+	color: graytext;
+	font-size: 18px;
+}
+
+.calculation div {
+	text-align: justify;
+}
+
+.calculation td {
+	word-wrap: break-word;
+	min-width: 120px;
+	max-width: 300px;
+	white-space: normal;
+}
+
+.calculation table {
+	border: none;
+}

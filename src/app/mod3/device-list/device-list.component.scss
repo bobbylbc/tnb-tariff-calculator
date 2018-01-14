@@ -1,0 +1,26 @@
+
+.device-list{
+	border: 0.1em solid black;
+}
+
+.device-list div button{
+	display: inline-block;
+	height: 25px;
+	margin-bottom: 5px;
+	float: right;
+}
+
+.device-form{
+	border: 1px solid black;
+	padding: 1em 0 1em 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.device-form div div select, .device-form div div input{
+	height: 25px;
+}
+
+.device-form div div small {
+	color: red;
+}

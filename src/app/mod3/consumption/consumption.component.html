@@ -1,0 +1,55 @@
+
+<div class="consumption col-lg-12 col-xs-12">
+
+	<button (click)="closeDialog()">Back</button>
+	<small [hidden]="errorMsg.hidden">{{ errorMsg.value }}</small>
+	
+	<div class="table-responsive">
+		<table class="table">
+			<tbody>
+				<tr class="title">
+					<td>Consumption Calculation</td>
+				</tr>
+
+				<tr [hidden]="row1.hidden">
+					<td class="col-xs-6">{{ row1.title }}</td>
+					<td class="col-xs-6">{{ row1.value }}</td>
+				</tr>
+				
+				<tr [hidden]="row2.hidden">
+					<td class="col-xs-6">{{ row2.title }}</td>
+					<td class="col-xs-6">{{ row2.value }}</td>
+				</tr>
+				<tr [hidden]="row3.hidden">
+					<td class="col-xs-6">{{ row3.title }}</td>
+					<td class="col-xs-6">{{ row3.value }}</td>
+				</tr>
+				<tr [hidden]="row4.hidden">
+					<td class="col-xs-6">{{ row4.title }}</td>
+					<td class="col-xs-6">{{ row4.value }}</td>
+				</tr>
+				<tr [hidden]="row5.hidden">
+					<td class="col-xs-6">{{ row5.title }}</td>
+					<td class="col-xs-6">{{ row5.value }}</td>
+				</tr>
+				
+				
+				<tr [hidden]="total.hidden">
+					<td class="col-xs-6">{{ total.title }}</td>
+					<td class="col-xs-6">{{ total.value }}</td>
+				</tr>
+				
+				<tr [hidden]="explanationRow1.hidden">
+					<td class="col-xs-6">{{ explanationRow1.value }}</td>
+				</tr>
+				
+				<tr [hidden]="explanationRow2.hidden">
+					<td class="col-xs-6">{{ explanationRow2.value }}</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+
+</div>

@@ -1,0 +1,42 @@
+<div class="col-xs-11" [formGroup]="deviceForm">
+	<div class="row">
+		<small class="col-xs-12" [hidden]="deviceForm.controls.name.valid">
+			Required </small>
+		<label class="col-xs-6" for="name">Name</label>
+		<input class="col-xs-6" formControlName="name" />
+
+	</div>
+
+	<div class="row">
+		<label class="col-xs-6" for="powerUnit">Power Unit</label>
+		<select class="col-xs-6" formControlName="powerUnit">
+			<option *ngFor="let pu of powerUnits" [ngValue]="pu">{{
+				pu.name }}</option>
+		</select>
+	</div>
+
+	<div class="row">
+		<small class="col-xs-12" [hidden]="deviceForm.controls.power.valid">
+			Required and Positive numbers only </small>
+		<label class="col-xs-6" for="power">Device Power</label>
+		<input class="col-xs-6" formControlName="power" />
+	</div>
+
+	<div class="row">
+		<small class="col-xs-12" [hidden]="deviceForm.controls.peakDailyHours.valid">
+			Positive numbers only </small>
+		<label class="col-xs-6" for="peakDailyHours">Number of Hours (10am -
+			8pm)</label>
+		<input class="col-xs-6" formControlName="peakDailyHours" />
+
+	</div>
+
+	<div class="row">
+		<small class="col-xs-12" [hidden]="deviceForm.controls.nonPeakDailyHours.valid">
+			Positive numbers only </small>
+		<label class="col-xs-6" for="nonPeakDailyHours">Number of Hours (8pm -
+			10am)</label>
+		<input class="col-xs-6" formControlName="nonPeakDailyHours" />
+
+	</div>
+</div>

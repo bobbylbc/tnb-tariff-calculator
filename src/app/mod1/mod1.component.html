@@ -1,0 +1,59 @@
+<div class="container">
+	<h1>Electricity [TNB Malaysia]</h1>
+	<h3>How much is electricity costing me?</h3>
+	
+	<p>TNB Alert: xxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+	<br/>
+	<form [formGroup] = "form">
+		<input type="text" name="devicePower" placeholder="Device Power..." [(ngModel)]="devicePower">
+		
+		<select formControlName="powerUnitControl">
+	        <option *ngFor="let pu of powerUnits" [ngValue]="pu">
+          		{{ pu.name }}
+        	</option>
+      	</select>
+      	<p>Form value: {{ form.value | json }}</p> 
+     
+		<input type="text" name="peakHours" placeholder="Device Power..." [(ngModel)]="peakHours">
+		<input type="text" name="nonPeakHours" placeholder="Device Power..." [(ngModel)]="nonPeakHours">
+		
+		<input type="submit" name="Calculate" (click)="calculate()">
+	</form>
+	
+	
+
+<div class="row">
+
+	<p>A typical laptop will cost you around RM2.35 a month if you turn it on for 8 hours everyday (45W).</p>
+	<p>A small sauna cabin of </p>
+	<p>A medium sauna cabin will cost you around RM </p>
+	<p>Assumption of TOU Tariff Peak (8am - 10pm), NonPeak (10.01pm - 7.59pm)</p>
+	<p>ETOU will be a different calculator</p>
+	
+	Calculator will estimate daily, monthly electric consumption of your device and calculate how much
+	Calculator can add up devices to produce aggregate electricity estimates
+	Calculator will compare immediately difference across electricity tariff codes
+	User can opt to see more details of the calculation
+	GST only applicable to non-domestic and domestic 300W Above
+	ICPT only applicable to non-domestic and domestic 300W Above
+	
+
+</div>
+
+<div class="row">
+	<h2>Calculator</h2>
+
+</div>
+<div class="row">
+	<h2>Demo</h2>
+	
+	
+</div>
+
+<div class="row">
+	<h2>RSS Feed from TNB</h2>
+	
+	
+</div>
+
+</div>

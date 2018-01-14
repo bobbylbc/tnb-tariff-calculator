@@ -1,0 +1,17 @@
+<form class="holder-form" [formGroup]="holderForm" (ngSubmit)="onSubmit()">
+
+	<app-device-list
+		[holderForm] = "holderForm"
+		[devices] = "holderData.devices">
+	</app-device-list>
+	
+	<button class="col-lg-2 col-xs-12" type="submit" [disabled]="!holderForm.valid">Calculate</button>
+	
+</form>
+
+<div class="results">
+	<app-result-list
+		[devices] = "submittedHolderData.devices"
+		[results] = "results">
+	</app-result-list>
+</div>

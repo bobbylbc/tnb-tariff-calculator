@@ -1,0 +1,91 @@
+
+<div class="calculation col-lg-12 col-xs-12">
+
+	<button (click)="closeDialog()">Back</button>
+	Mention Minimum Cost Here!!! Error Message Display Here!!!
+	<div class="table-responsive">
+		<table class="table">
+			<tbody>
+				<tr [hidden]="notGstF.hidden" class="title">
+					<td>{{ notGstF.value }}</td>
+				</tr>
+
+				<tr [hidden]="notGstConKwhF.hidden">
+					<td class="col-xs-6">Consumption (KWH)</td>
+					<td class="col-xs-6">{{ notGstConKwhF.value }}</td>
+				</tr>
+				<tr [hidden]="notGstConRmF.hidden">
+					<td class="col-xs-6">Consumption (RM)</td>
+					<td class="col-xs-6">
+						<button (click)="openConsumptionCalculationDialog()">{{
+							notGstConRmF.value }}</button>
+					</td>
+				</tr>
+
+				<tr [hidden]="notGstIcptF.hidden">
+					<td class="col-xs-6 to-deduct">ICPT (1.52 sen/kWh)</td>
+					<td class="col-xs-6 to-deduct">{{ notGstIcptF.value }}</td>
+				</tr>
+
+				<tr [hidden]="notGstDeductedIcptF.hidden">
+					<td class="col-xs-6 final">Current Bill (Deducted ICPT)</td>
+					<td class="col-xs-6 final">{{ notGstDeductedIcptF.value }}</td>
+				</tr>
+
+
+				<tr [hidden]="gstF.hidden" class="title">
+					<td>{{ gstF.value }}</td>
+				</tr>
+				<tr [hidden]="gstConKwhF.hidden">
+					<td class="col-xs-6">Consumption (KWH)</td>
+					<td class="col-xs-6">{{ gstConKwhF.value }}</td>
+				</tr>
+				<tr [hidden]="gstConRmF.hidden">
+					<td class="col-xs-6">Consumption (RM)</td>
+					<td class="col-xs-6">
+						<button (click)="openConsumptionCalculationDialog()">{{
+							gstConRmF.value }}</button>
+					</td>
+				</tr>
+				<tr [hidden]="maxDemandKwF.hidden">
+					<td class="col-xs-6">MaxDemand (kW)</td>
+					<td class="col-xs-6">{{ maxDemandKwF.value }}</td>
+				</tr>
+				<tr [hidden]="maxDemandRmF.hidden">
+					<td class="col-xs-6">MaxDemand (RM)</td>
+					<td class="col-xs-6">{{ maxDemandRmF.value }}</td>
+				</tr>
+				<tr [hidden]="gstIcptF.hidden">
+					<td class="col-xs-6 to-deduct">ICPT (1.52 sen/kWh)</td>
+					<td class="col-xs-6 to-deduct">{{ gstIcptF.value }}</td>
+				</tr>
+				<tr [hidden]="gstDeductedIcptF.hidden">
+					<td class="col-xs-6">Current Bill (Deducted ICPT)</td>
+					<td class="col-xs-6">{{ gstDeductedIcptF.value }}</td>
+				</tr>
+				<tr [hidden]="gstGstF.hidden">
+					<td class="col-xs-6 to-add">GST (6%)</td>
+					<td class="col-xs-6 to-add">{{ gstGstF.value }}</td>
+				</tr>
+				<tr [hidden]="gstAddedGstF.hidden">
+					<td class="col-xs-6 final">Current Bill (Added GST)</td>
+					<td class="col-xs-6 final">{{ gstAddedGstF.value }}</td>
+				</tr>
+
+
+				<tr [hidden]="totalKwhF.hidden">
+					<td class="col-xs-6 total">Total (kWh)</td>
+					<td class="col-xs-6 total">{{ totalKwhF.value }}</td>
+				</tr>
+
+				<tr [hidden]="totalRmF.hidden">
+					<td class="col-xs-6 total">Total (RM)</td>
+					<td class="col-xs-6 total">{{ totalRmF.value }}</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+
+</div>

@@ -1,0 +1,22 @@
+<!-- device-list.component.html -->
+
+
+<div class="container device-list" [formGroup]="holderForm">
+    <div formArrayName="devices">
+        <div class="device-form col-lg-3 col-xs-9" *ngFor="let device of devices; let idx=index ">
+        	
+        	<div class="col-xs-12">
+        		<button [disabled]="devices.length <= 1" (click)="removeDevice(idx)">Remove</button>
+	        </div>
+	        
+        	<app-device-form
+                [devices]="holderForm.controls.devices"
+                [device]="device">
+                 </app-device-form>
+        </div>
+    </div>
+</div>
+
+<button (click)="addDevice()">
+    Add Device
+</button>

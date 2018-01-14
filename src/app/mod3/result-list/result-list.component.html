@@ -1,0 +1,23 @@
+<div class="container">
+	<p>Calculation Results:</p>
+
+</div>
+
+<div id="accordion">
+
+	<div class="card" *ngFor="let res of results; let idx=index">
+		<div class="card-header">
+			<a class="card-link" data-toggle="collapse" data-parent="#accordion"
+				href="#collapse{{ idx }}"> {{ res.name }} [{{ res.totalKWH }}kWh] </a>
+		</div>
+		<div id="collapse{{ idx }}" class="collapse">
+			<div class="card-body">
+				<div *ngFor="let bill of res.bills">
+					<label>{{ bill.name }}</label>: <button 
+					(click)="openCalculationDialog(res.name, bill.name)">RM {{ convertToRM(bill.bill) }} </button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,29 @@
+.consumption .final {
+	font-weight: bold;
+}
+
+.consumption .total {
+	font-weight: bold;
+	font-style: oblique;
+}
+
+.consumption .title {
+	text-decoration: underline;
+	color: graytext;
+	font-size: 18px;
+}
+
+.consumption div {
+	text-align: justify;
+}
+
+.consumption td {
+	word-wrap: break-word;
+	min-width: 120px;
+	max-width: 300px;
+	white-space: normal;
+}
+
+.consumption table {
+	border: none;
+}
